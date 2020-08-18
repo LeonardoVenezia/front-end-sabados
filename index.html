@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clase {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+<h1 id="titulo">HOLA MUNDO</h1>
+
+<p class="parrafo">Lorem ipsum dolor sit <span class="none">amet consectetur adipisicing elit. Laboriosam numquam voluptas, perspiciatis officiis quos commodi velit animi repudiandae deserunt nam delectus ab. Hic quo laboriosam neque voluptatum sapiente unde</span>  culpa?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam numquam voluptas, perspiciatis officiis quos commodi velit animi repudiandae deserunt nam delectus ab. Hic quo laboriosam neque voluptatum sapiente unde culpa?</p>
+
+<div id="contenedor"></div>
+
+</body>
+<script>
+
+// VARIABLES Y CONSTANTES
+
+let nombreVariable = 'Hola mundo';
+// var nombreVariableVar = 'Hola mundo';
+const nombreConstante = "Soy una constante";
+
+nombreVariable = nombreVariable + '. ' + nombreConstante;
+
+// console.log(nombreVariable)
+
+// TIPOS DE DATOS
+
+const string = 'Cadena de caracteres';
+const string2 = "Cadena de caracteres";
+const string3 = `Cadena de caracteres. ${nombreVariable}`;
+
+// console.log(ejemplo)
+// const ejemplo = "hola";
+// const signo = '$';
+// const precio = "1000"
+
+// console.log(`${signo} ${precio}`)
+
+const number = 10;
+
+const booleano = true // false
+
+const array = ["string", 10, ['dato', 9], false, 'otro string']
+
+array[1] = 11;
+
+array.push("dato pusheado")
+
+array[10] = 6;
+
+// console.log( array[2][0] )
+// console.log( array.length )
+
+const objeto = {
+    clave: 'valor',
+    nombre: "Juan"
+}
+
+objeto.nombre = null
+
+console.log(objeto.nombre)
+console.log(objeto['clave'])
+
+const indefinido = undefined;
+const nulo = null;
+
+console.log(objeto.propiedadQueNoExiste)
+
+// CONDICIONALES
+
+const a = true;
+const b = false;
+/*
+if ( (b && a) || b ) {
+
+mayor >
+menor <
+mayor o igual >=
+menor o igual <=
+igual ==
+igual estricto ===
+distinto !=
+distinto estricto !==
+negación !
+or ||
+and &&
+
+// falso => false '' 0 null undefined
+    console.log("VERDADERO")
+} else if (a) {
+    console.log('FALSO')
+}
+*/
+
+// CICLOS
+
+// i++ => i = i + 1
+// i-- => i = i - 1
+
+const semana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+
+// for ( let i = 0; i < 10; i++) {
+//     console.log(i)
+// }
+
+// const largo = semana.length;
+
+// for( let i = 0; i < largo; i++){
+//     console.log(semana[i])
+// }
+// let i= 0;
+// while (i < 10) {
+//     console.log(i);
+//     i++
+// }
+
+/*
+filter
+map
+
+find
+
+forEach
+
+for in
+for of
+*/
+
+// for (item of semana) {
+//     console.log(item)
+// }
+
+const objEjemplo = {
+    nombre: 'juan',
+    edad: 5678,
+    empleo: 'Junto latitas, cirujano'
+}
+
+console.log(objEjemplo['edad'])
+
+for ( item in objEjemplo ) {
+    console.log(item)
+    console.log(objEjemplo[item])
+}
+
+// EJERCICIO
+
+// let consulta = prompt("Que edad tenés?");
+
+// consulta = Number(consulta)
+
+// if (consulta >= 18) {
+//     console.log("Bienvenido")
+// } else {
+//     console.log("Tomatela te dije")
+// }
+
+// console.log(consulta)
+
+
+// FUNCIONES
+
+nombreFuncion('parametro', 'segundo parametro')
+nombreFuncion('otra cosa')
+nombreFuncion(10)
+
+function nombreFuncion(argumento, argumento2) {
+    console.log("Soy " + argumento)
+    console.log(argumento2)
+}
+
+
+
+const arrowFunction = argumento => console.log("Soy " + argumento)
+
+arrowFunction('parametro', 'segundo parametro')
+arrowFunction('otra cosa')
+arrowFunction(10)
+
+
+// DOM
+
+// const titulo = document.getElementById('titulo');
+// const parrafoClase = document.getElementsByClassName('parrafo');
+// const parrafoEtiqueta = document.getElementsByTagName('h1');
+
+// const selector = document.querySelector('p')
+// const selectorAll = document.querySelectorAll('p')
+
+// console.log(selector)
+
+const titulo = document.querySelector('#titulo');
+
+// titulo.classList.add('clase');
+// titulo.classList.remove('clase');
+// titulo.classList.toggle('clase');
+// titulo.classList.toggle('clase');
+// titulo.classList.toggle('clase');
+
+titulo.id = 'carlos'
+
+titulo.setAttribute('name', 'nombre del atributo')
+
+// console.log(titulo.getAttribute('name'))
+
+
+console.log(titulo.textContent)
+titulo.textContent = 'Esto es el nuevo texto';
+
+titulo.innerHTML = 'Titulo nuevo'
+titulo.innerText = 'Titulo nuevo (innerText)'
+
+
+const contenedor = document.querySelector('#contenedor');
+
+contenedor.innerHTML = '<p>Insertanto HTML</p>'
+
+
+const parrafo = document.querySelector('.parrafo')
+
+console.log(parrafo.innerText)
+console.log(parrafo.textContent)
+
+
+</script>
+</html>
