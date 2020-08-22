@@ -119,3 +119,33 @@ function callback() {
     imagen.classList.toggle('desactivado');
 }
 
+// Eventos
+
+const eventos = document.querySelector('#eventos');
+const eventos2 = document.querySelector('#eventos2');
+
+// eventos.addEventListener('nombre del evento', referenciaFuncion);
+// eventos.removeEventListener('nombre del evento', referenciaFuncion);
+
+// eventos.addEventListener('click', function() {
+//     console.log("disparando click")
+// })
+
+eventos.addEventListener('click', otroLado)
+eventos2.addEventListener('click', otroLado)
+// eventos.removeEventListener('click', otroLado)
+
+function otroLado(e) {
+    const elemento = e.target;
+    elemento.textContent = 'nuevo texto'
+}
+
+// eventos.onclick = function() {
+//     console.log("onclick");
+// }
+
+// eventos.onclick = onclickDos;
+
+// function onclickDos() {
+//     console.log("onclick2");
+// }
