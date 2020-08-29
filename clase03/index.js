@@ -1,5 +1,5 @@
 /// BUBBLE Y CAPTURING
-
+/* 
 const uno = document.querySelector('#uno');
 const dos = document.querySelector('#dos');
 const tres = document.querySelector('#tres');
@@ -20,7 +20,7 @@ tres.addEventListener('click', (e)=> {
     console.log('TRES')
 }, true )
 
-
+*/
 // Funciones iteradoras
 
 const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
@@ -59,3 +59,36 @@ const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'do
 
 //////////////////////////////////////////////////
 
+// setTimeout(foo, 3000)
+
+// function foo() {
+//     console.log("ejemplo")
+// }
+
+function uno() {
+     console.log("uno")
+}
+ function dos() {
+    console.log("dos")
+}
+function tres() {
+    console.log("tres")
+}
+
+setTimeout(uno, 1000)
+setTimeout(dos, 0)
+tres()
+
+
+function a() {
+    b()
+    c()
+}
+function b() {
+    c()
+}
+function c() {
+    console.log("holaaaaaa");
+}
+
+a()
