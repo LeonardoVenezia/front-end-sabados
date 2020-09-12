@@ -3,7 +3,7 @@ const ajax = new XMLHttpRequest();
 
 ajax.open('GET', 'api/json.json');
 
-ajax.addEventListener('load', ajaxCallback)
+ajax.addEventListener('load', ajaxCallback);
 
 ajax.send();
 
